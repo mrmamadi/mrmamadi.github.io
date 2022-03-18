@@ -5,14 +5,96 @@
 		<title>Personal Website</title>
 		<!-- user's visible area of webpage-->
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
-
-		<link rel="stylesheet" href="styles.css" />
-
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="./js/nav.js" defer></script>
 		<meta name="author" content="Kgaogelo Mamadi" />
 		<meta name="charset" content="utf-8" />
 	</head>
 
 	<body>
-		<h1>Personal Website</h1>
+		<header>
+			<div class="container">
+				<h1>Personal Website</h1>
+				<h3>Kgaogelo Mamadi</h3>
+			</div>
+
+			<button class="toggle" aria-selected="false"></button>
+			<nav>
+				<ul class="nav-bar" id="nav-bar" data-visible="false">
+					<li><a href=#about>About Me</a></li>
+					<li><a href=#skills>Skills</a></li>
+					<li><a href=#projects>Portfolio</a></li>
+					<li><a href=#contact>Contact Me</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="about" id="about">
+			<h1>Hi, I'm Kage :)</h1>
+			<div class="container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<!-- <img src="./img/man.png"> -->
+		</section>
+
+		<section class="skills" id="skills">
+			<!-- <div class="languages"> -->
+				<ul id="lang-icons">
+					<li><img src="./img/logo_css.png" alt=""></li>
+					<li><img src="./img/logo_html.png" alt=""></li>
+					<li><img src="./img/logo_java.png" alt=""></li>
+					<li><img src="./img/logo_python.png" alt=""></li>
+					<li><img src="./img/logo_sql.png" alt=""></li>
+				</ul>
+				<ul class="skill-text">
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+				</ul>
+			<!-- </div> -->
+			<div class="container">
+				<h2>Skills</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</section>
+
+		<section class="projects" id="projects">
+			<div class="container">
+				<h2>Projects</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="project-boxes">
+				<div class="box">
+					<img src="./img/img_eskom.jpg" alt="">
+					<h3>Project 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="box">
+					<img src="./img/img_netflix.jpg" alt="">
+					<h3>Project 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="box">
+					<img src="./img/img_twtter.jpg" alt="">
+					<h3>Project 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div class="container">
+				<h3>Contact Me</h3>
+				<ul>
+					<li><a href="https://github.com/mrmamadi" target="_blank" title="Connect on GitHub"><img src="./img/logo_github.png" alt=""></a></li>
+					<li><a href="https://www.linkedin.com/in/kgaogelo-mamadi-765a75202/" target="_blank" title="Connect on LinkedIn"><img src="./img/logo_linkedin.png" alt=""></a></li>
+					<li><a href="mailto:mrmamadi@outlook.com" target="_blank"><img src="./img/logo_mail.png" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<h3>Interested In Hiring Me?</h3>
+				<a href="./pdfs/kgaogelo_mamadi_cv.pdf" target="_blank" download>Download My CV</a>
+			</div>
+		</section>
 	</body>
 </html>
