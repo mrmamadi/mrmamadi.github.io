@@ -21,15 +21,16 @@ section{
 ul{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 
 /*HEADER*/
-header{
+/* header{
     background-color: #35424A;
     border-bottom: #E8491D 3px solid;
     height: 10vh;
-}
+} */
 header h3, h1{
     text-align: center;
     line-height: 0.5px;
@@ -59,12 +60,11 @@ header a{
 
 /*ABOUT*/
 
-/* .about{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+.about{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
 /* .about img{
     width: 20%;
     aspect-ratio: 1;
@@ -82,6 +82,11 @@ header a{
 
 
 @media (max-width: 768px) {
+
+    header {
+        display: grid;
+        grid-template-areas: z;
+    }
     header h3, h1{
         text-align: left;
         line-height: 0.5px;
@@ -123,20 +128,61 @@ header a{
 
 /*ABOUT*/
 .about{
-    height: 90vh;
+    height: 100vh;
+    /* display: flex;
+    flex-direction:column; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 20% 2fr 1fr 3fr 20%;
+    grid-template-areas: 
+    ". . ."
+    ". h ."
+    ". s ."
+    ". c ."
+    ". . .";
+    /* align-items: center; */
+    /* justify-items: center; */
+    
+}
+.about > .container{
+    /* margin: 40% 0% 0% 10%; */
+    margin: 0;
+    grid-area: h;
+    /* border:#35424A solid 5px; */
+
+}
+.socials{
+    width: 100%;
+    padding: 0%;
+    grid-area: s;
+    background-color: ;
+    /* border:#35424A solid 5px; */
+
+}
+.socials>ul{
+    /* margin: 0% 0% 0% 10%; */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+}
+.about img{
+    height: 40px;
+}
+.about > .cv{
+    /* margin-left: 10%; */
+    /* height: 10%; */
+    grid-area: c;
+    /* border:#35424A solid 5px; */
 }
 
-.about h1{
+/* .about h1{
     padding-top: 10vh;
     font-size: range(0px, 80px);
 }
 .about .container{
     margin: 10vh;
     align-items: center;    
-}
+} */
 
 /*SKILLS*/
 
@@ -170,4 +216,50 @@ header a{
     border: #35424A solid 5px;
     /* object-fit: contain; */
     /* height: 50px; */
+}
+
+/*PROJECTS*/
+.projects{
+    /* justify-content: center; */
+    display: grid;
+    grid-template-rows: 5% auto 5%;
+    grid-template-areas:
+    "h h h"
+    "g g g"
+    ". . .";
+}
+
+.projects > .container{
+    grid-area: h;
+}
+.project-boxes{
+    grid-area: g;
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 2%;
+}
+.box {
+    /* border: #35424A 5px solid; */
+    color: white;
+    background-color: #35424A;
+    border-radius: 10%;
+    padding: 2%;
+    margin: 2%;
+    align-self: center;
+
+    scroll-snap-align: start;
+}
+.box > a{
+    background-color: orange;
+    padding: 2%;
+    color: black;
+    text-decoration: none;
+    border-radius: 10%;
 }
