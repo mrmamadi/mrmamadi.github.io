@@ -75,6 +75,7 @@ header a{
     transition: transform 350ms ease-in;
 }
 .nav-bar[data-visible="true"] {
+    -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
 
