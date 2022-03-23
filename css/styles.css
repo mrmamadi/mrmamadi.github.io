@@ -46,10 +46,7 @@ header a{
     right: 0;
     left: 60%;
     flex-direction: column;
-    /* background:hsl(0 0% 50%); */
-    /* background-color: var(--main_off); */
     background-color: var(--main_off);
-    /* border: var(--accent_shade) solid 1px; */
     justify-content:center;
     z-index: 1000;
 
@@ -62,9 +59,7 @@ header a{
 
 }
 
-.nav-bar a:hover{
-    box-shadow: var(--shadow);
-}
+
 
 .toggle{
     display: block;
@@ -258,6 +253,10 @@ header a{
     flex-direction: row;
     position:relative;
     margin: 1em 10% 0 10%;
+}
+.nav-bar a:hover{
+    font-size: larger;
+    transition: font-size ease-in 350ms;
 }
 /*-------------------------HEADER:END------------------------------*/
 
