@@ -64,12 +64,12 @@ header a{
     gap: 2rem;
     align-items: center;
     position: fixed;
-    /* top: 0;
+    top: 0;
     bottom: 0;
     right: 0;
-    left: 20em; */
+    left: 20em;
     /* inset: 0; */
-    inset: 0 0 0 15em;
+    /* inset: 0, 0, 0, 15em; */
     flex-direction: column;
     background:hsl(0 0% 50%);
     justify-content:center;
