@@ -5,14 +5,123 @@
 		<title>Personal Website</title>
 		<!-- user's visible area of webpage-->
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
-
-		<link rel="stylesheet" href="styles.css" />
-
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="./js/nav.js" defer></script>
 		<meta name="author" content="Kgaogelo Mamadi" />
 		<meta name="charset" content="utf-8" />
 	</head>
 
 	<body>
-		<h1>Personal Website</h1>
+		<header>
+			<button class="toggle" aria-selected="false"></button>
+			<nav>
+				<ul class="nav-bar" id="nav-bar" data-visible="false">
+					<li><a href=#about>About Me</a></li>
+					<li><a href=#skills>Technical Skills</a></li>
+					<li><a href=#projects>Portfolio</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="about" id="about">
+			<div class="container">
+				<h1>Hi. My Name is <br><span>Kgaogelo Mamadi</span></h1>
+				<!-- <br> -->
+				<h4>I am an emerging<br><span>Software and Systems Developer</span>. <br>I enjoy the fast-paced, challenging environment of the tech industry and being a part of pioneering teams.</h4>
+			</div>
+			<div class="socials">
+				<ul>
+					<li><a href="https://github.com/mrmamadi" target="_blank" title="Connect on GitHub"><img src="./img/logo_github.png" alt=""></a></li>
+					<li><a href="https://www.linkedin.com/in/kgaogelo-mamadi-765a75202/" target="_blank" title="Connect on LinkedIn"><img src="./img/logo_linkedin.png" alt=""></a></li>
+					<!-- <li><a href="mailto:mrmamadi@outlook.com" target="_blank"><img src="./img/logo_mail.png" alt=""></a></li> -->
+				</ul>
+			</div>
+			<div class="cv">
+				<h3>Interested In Hiring Me?</h3>
+				<a href="./pdfs/kgaogelo_mamadi_cv.pdf" target="_blank" download>Download My CV</a>
+			</div>
+		</section>
+
+		<section class="skills" id="skills">
+			<div class="heading">
+				<h2>Technical Skills</h2>
+			</div>
+			<div class="skill-boxes">
+				<div class="skill-box">
+					<h4>Languages</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_css.png" title = "CSS3" alt=""></li>
+						<li><img src="./img/logo_html.png" title = "HTML5" alt=""></li>
+						<li><img src="./img/logo_java.png" title = "Java" alt=""></li>
+						<li><img src="./img/logo_python.png" title = "Python" alt=""></li>
+						<li><img src="./img/logo_sql.png" title = "SQL" alt=""></li>
+					</ul>
+				</div>
+				<div class="skill-box">
+					<h4>Operating Systems</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_linux.png" title = "Various Distributions of Linux" alt=""></li>
+						<li><img src="./img/logo_windows.png" title = "Various Releases of Windows" alt=""></li>
+					</ul>
+				</div>
+				<div class="skill-box">
+					<h4>Project Management</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_github.png" title = "GitHub" alt=""></li>
+					</ul>
+				</div>
+				<div class="skill-box">
+					<h4>Cloud Computing Services</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_aws.png" title = "Amazon Web Services" alt=""></li>
+						<li><img src="./img/logo_gcp.png" title = "Google Cloud Platform" alt=""></li>
+					</ul>
+				</div>
+				<div class="skill-box">
+					<h4>Methodologies</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_agile.png" title = "Agile" alt=""></li>
+						<li><img src="./img/logo_tdd.png" title = "Test Driven Development" alt=""></li>
+					</ul>
+				</div>
+				<div class="skill-box">
+					<h4>Software Development Tools & Frameworks</h4>
+					<ul class="icons">
+						<li><img src="./img/logo_springboot.png" title = "Spring Boot" alt=""></li>
+						<li><img src="./img/logo_intellij.png" title = "IntelliJ" alt=""></li>
+						<li><img src="./img/logo_vscode.png" title = "Visual Studio Code" alt=""></li>
+						<li><img src="./img/logo_atom.png" title = "Atom" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects" id="projects">
+			<div class="heading">
+				<h2>Portfolio</h2>
+			</div>
+			
+			<div class="project-boxes">
+				<div class="box">
+					<h3><span>Name:</span> Project #1</h3>
+					<h3><span>Description:</span></h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sint rem eligendi ipsa asperiores, mollitia quae dicta quidem consectetur beatae sit cupiditate aperiam iusto rerum provident fuga officiis porro. Quibusdam.</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sint rem eligendi ipsa asperiores, mollitia quae dicta quidem consectetur beatae sit cupiditate aperiam iusto rerum provident fuga officiis porro. Quibusdam.</p>
+					<a href="https://www.google.com/" target="_blank" class="btn-lnk">Link To Project</a>
+				</div>
+				<div class="box">
+					<h3><span>Name:</span> Project #2</h3>
+					<h3><span>Description:</span></h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sint rem eligendi ipsa asperiores, mollitia quae dicta quidem consectetur beatae sit cupiditate aperiam iusto rerum provident fuga officiis porro. Quibusdam.</p>
+					<a href="https://www.google.com/" target="_blank" class="btn-lnk">Link To Project</a>
+				</div>
+				<div class="box">
+					<h3><span>Name:</span> Project #3</h3>
+					<h3><span>Description:</span></h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sint rem eligendi ipsa asperiores, mollitia quae dicta quidem consectetur beatae sit cupiditate aperiam iusto rerum provident fuga officiis porro. Quibusdam.</p>
+					<a href="https://www.google.com/" target="_blank" class="btn-lnk">Link To Project</a>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

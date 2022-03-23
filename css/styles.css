@@ -1,0 +1,301 @@
+:root {
+    --main: #2a2a2a;
+    --main_off: #313131;
+    --accent_bright: #fb8122;
+    --accent_shade: #e1e2e2;
+    --shadow: 5px 5px 10px black;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: var(--main);
+    color: #f4f4f4;
+}
+
+/*GLOBAL*/
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*-------------------------HEADER------------------------------*/
+
+header a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.nav-bar a{
+    border: var(--main_off) solid 2px;
+}
+.nav-bar{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    right: 0;
+    left: 60%;
+    flex-direction: column;
+    background-color: var(--main_off);
+    justify-content:center;
+    z-index: 1000;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+}
+.nav-bar[data-visible="true"] {
+    transform: translateX(0%);
+    box-shadow: 10px 0px 50px 20px black;
+
+}
+
+
+
+.toggle{
+    display: block;
+    position: fixed;
+    background-image: url("../img/icon_menu.png");
+    background-color: var(--main_off);
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 100%;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    top: 1%;
+    right: 2%;
+    z-index: 9999;
+}
+.toggle[aria-selected='true']{
+    background-image: url("../img/icon_close.jpg");
+}
+
+/*-------------------------HEADER:END------------------------------*/
+
+/*-------------------------ABOUT------------------------------*/
+.about{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 15% 2fr 1fr 2fr 1fr 20%;
+    grid-template-areas: 
+    ". . ."
+    ". h ."
+    ". s ."
+    ". . ."
+    ". c ."
+    ". . .";
+}
+.socials{
+    width: 100%;
+    padding: 0%;
+    grid-area: s;
+}
+.socials ul{
+    justify-content: center;
+    display: flex;
+}
+.about img{
+    height: 40px;
+}
+.about img:hover{
+    height: 45px; 
+    transition: height 350ms ease-in-out;
+}
+.about > .container{
+    border-top: #fb8122 solid 10px;
+    width: 100%;
+    margin: 0;
+    grid-area: h;
+    text-align: center;
+    line-height: 2;
+}
+.container span{
+    color: var(--accent_bright);
+}
+.cv{
+    grid-area: c;
+}
+.cv a{
+    text-decoration: none;
+    color: var(--accent_shade);
+    background-color: var(--accent_bright);
+    box-shadow: 5px 5px 5px black;
+    padding: 15px;
+}
+
+.cv a:hover{
+    color: var(--accent_bright);
+    background-color: var(--main);
+    box-shadow: none;
+    font-size: 1rem;
+    border: var(--accent_bright) 1px solid;
+    transition: font-size 350ms ease-in-out;
+}
+
+
+/*-------------------------ABOUT:END------------------------------*/
+
+/*-------------------------SKILLS------------------------------*/
+.skills{
+    display: grid;
+    grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
+    grid-template-areas: 
+    ". sh sh sh ."
+    ". si si si ."
+    ". . . . .";
+    justify-items: center;
+}
+.skills > .heading{
+    grid-area: sh;
+    justify-self: center;
+}
+.skill-boxes{
+    grid-area: si;
+    gap: 50px;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
+    grid-auto-rows: auto;
+    gap: 2rem;
+}
+
+.skills img{
+    width: 75px;
+    object-fit: contain;
+    height: 75px;
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    padding: 15%;
+    transition: height 1s;
+}
+.skills img:hover{
+    background-color: var(--main_off);
+    box-shadow: none;
+}
+
+/*-------------------------SKILLS:END------------------------------*/
+
+/*-------------------------PORTFOLIO------------------------------*/
+.projects{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5% auto 5%;
+    grid-template-areas:
+    ". h ."
+    "g g g"
+    ". . .";
+}
+
+.projects > .heading{
+    grid-area: h;
+}
+.project-boxes{
+    grid-area: g;
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 2%;
+}
+.box {
+    color: white;
+    background-color: var(--main_off);
+    box-shadow: var(--shadow);
+    border-radius: 15%;
+    padding: 5%;
+    margin: 2%;
+    align-self: center;
+
+    scroll-snap-align: start;
+}
+.box > a{
+    background-color: var(--accent_bright);
+    padding: 2%;
+    color: black;
+    text-decoration: none;
+    border-radius: 10%;
+}
+/*-------------------------PORTFOLIO:END------------------------------*/
+
+@media (min-width: 768px) {
+/*-------------------------HEADER------------------------------*/
+.toggle{
+    display: none;
+}
+
+.nav-bar{
+    justify-content: space-around;
+    font-size: 1rem;
+    inset: 0 0 0 0;
+    background-color: var(--main_off);
+    box-shadow: var(--shadow);
+    transform: translateX(0%);
+    flex-direction: row;
+    position:relative;
+    margin: 1em 10% 0 10%;
+}
+.nav-bar a:hover{
+    font-size: larger;
+    transition: font-size ease-in 350ms;
+}
+/*-------------------------HEADER:END------------------------------*/
+
+/*-------------------------ABOUT------------------------------*/
+
+.about{
+    grid-template-areas: 
+    ". . ."
+    ". h ."
+    ". s ."
+    ". c ."
+    ". . .";
+}
+
+.cv{
+    justify-self: center;
+    text-align: center;
+
+}
+/*-------------------------ABOUT:END------------------------------*/
+
+/*-------------------------SKILLS------------------------------*/
+.skills{
+    justify-items: normal;
+    min-height: 100vh;
+
+}
+.skill-boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+/*-------------------------SKILLS:END------------------------------*/
+
+
+/*-------------------------PORTFOLIO------------------------------*/
+.project-boxes{
+    grid-auto-columns: 50%
+}
+/*-------------------------PORTFOLIO:END------------------------------*/
+
+
+}
