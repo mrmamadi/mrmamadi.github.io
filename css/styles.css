@@ -117,13 +117,14 @@ header a{
     /* align-items: center; */
     display: grid;
     grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 20% 2fr 1fr 3fr 20%;
+    grid-template-rows: 15% 2fr 1fr 2fr 1fr 20%;
     grid-template-areas: 
     ". . ."
     ". h ."
     ". s ."
     ". . ."
-    ". c .";
+    ". c ."
+    ". . .";
     /* align-items: center; */
     /* justify-items: center; */
     
@@ -200,22 +201,21 @@ header a{
 .skill-boxes{
     grid-area: si;
     gap: 50px;
-
 }
 .icons{
     display: grid;
     /* grid-auto-flow: column; */
-    grid-template-columns: repeat(auto-fill, minmax(50px, 75px));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
     grid-auto-rows: auto;
     gap: 2rem;
 }
 
 .skills img{
-    width: 100%;
-    inline-size: 100%;
+    width: 75px;
+    /* inline-size: 100%; */
     object-fit: contain;
-    max-height: 100px;
-    aspect-ratio: 1;
+    height: 75px;
+    /* aspect-ratio: 1; */
     background-color: var(--main_off);
     box-shadow: 5px 5px 10px black;
     border-radius: 50%;
@@ -260,7 +260,9 @@ header a{
 .box {
     /* border: #35424A 5px solid; */
     color: white;
-    background-color: #35424A;
+    /* background-color: #35424A; */
+    background-color: var(--main_off);
+    box-shadow: var(--shadow);
     border-radius: 10%;
     padding: 2%;
     margin: 2%;
