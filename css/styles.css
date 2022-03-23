@@ -70,12 +70,12 @@ header a{
     justify-content:center;
     z-index: 1000;
 
-    -webkit-transform: translateX(300%);
+    -webkit-transform: translateX(100px);
     transform: translateX(100%);
     transition: transform 350ms ease-in;
 }
 .nav-bar[data-visible="true"] {
-    -webkit-transform: translateX(0%);
+    -webkit-transform: translateX(0px);
     transform: translateX(0%);
 }
 
