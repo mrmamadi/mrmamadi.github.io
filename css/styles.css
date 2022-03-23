@@ -69,7 +69,7 @@ header a{
     right: 0;
     left: 20em; */
     /* inset: 0; */
-    inset: 0 0 0 30em;
+    inset: 0 0 0 calc(var(--vh,1vw)*40);
     flex-direction: column;
     background:hsl(0 0% 50%);
     justify-content:center;
@@ -80,7 +80,7 @@ header a{
     transition: transform 350ms ease-in;
 }
 .nav-bar[data-visible="true"] {
-    -webkit-transform: translateX(50vw);
+    -webkit-transform: translateX(0vw);
     transform: translateX(0%);
 }
 
