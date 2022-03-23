@@ -19,8 +19,8 @@ body{
 
 /*GLOBAL*/
 .container{
-    width :80%;
-    margin: auto;
+    /* width :80%; */
+    /* margin: auto; */
     /* overflow: hidden; */
 }
 section{
@@ -70,13 +70,13 @@ header a{
     justify-content:center;
     z-index: 1000;
 
-    -webkit-transform: translateX(100px);
-    transform: translateX(100%);
+    -webkit-transform: translateX(100vw);
+    /* transform: translateX(100%); */
     transition: transform 350ms ease-in;
 }
 .nav-bar[data-visible="true"] {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0%);
+    -webkit-transform: translateX(0vw);
+    /* transform: translateX(0%); */
 }
 
 .nav-bar a:hover{
@@ -186,7 +186,7 @@ header a{
 /*-------------------------SKILLS------------------------------*/
 .skills{
     display: grid;
-    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
     grid-template-areas: 
     ". sh sh sh ."
     ". si si si ."
@@ -199,14 +199,15 @@ header a{
 }
 .skill-boxes{
     grid-area: si;
+    gap: 50px;
+
 }
 .icons{
     display: grid;
     /* grid-auto-flow: column; */
-    grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 75px));
     grid-auto-rows: auto;
     gap: 2rem;
-    justify-content: center;
 }
 
 .skills img{
