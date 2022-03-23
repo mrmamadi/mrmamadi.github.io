@@ -63,7 +63,7 @@ header a{
     list-style: none;
     gap: 2rem;
     align-items: center;
-    position: fixed;
+    position: sticky;
     inset: 0 0 0 60vw;
     flex-direction: column;
     background:hsl(0 0% 50%);
@@ -71,12 +71,12 @@ header a{
     z-index: 1000;
 
     -webkit-transform: translateX(100vw);
-    /* transform: translateX(100%); */
+    transform: translateX(100%);
     transition: transform 350ms ease-in;
 }
 .nav-bar[data-visible="true"] {
-    -webkit-transform: translateX(0vw);
-    /* transform: translateX(0%); */
+    -webkit-transform: translateX(50vw);
+    transform: translateX(0%);
 }
 
 .nav-bar a:hover{
