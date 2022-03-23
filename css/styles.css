@@ -87,8 +87,7 @@ header a{
     display: block;
     position: fixed;
     background-image: url("../img/icon_menu.png");
-    /* background-color: var(--main_off); */
-    background-color: red;
+    background-color: var(--main_off);
     box-shadow: var(--shadow);
     border-radius: 50%;
 
@@ -96,8 +95,8 @@ header a{
     background-position: 100% 0%;
     background-size: 100%;
     border: 0;
-    height: 9%;
-    width: 18%;
+    height: 50px;
+    width: 50px;
     top: 1%;
     right: 2%;
     z-index: 9999;
