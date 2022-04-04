@@ -157,7 +157,6 @@ header a{
     ". sh sh sh ."
     ". si si si ."
     ". . . . .";
-    justify-items: center;
 }
 .skills > .heading{
     grid-area: sh;
@@ -165,12 +164,13 @@ header a{
 }
 .skill-boxes{
     grid-area: si;
-    gap: 50px;
+    gap: 4rem;
+    justify-content: center;
 }
 .icons{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
-    grid-auto-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -181,7 +181,6 @@ header a{
     box-shadow: var(--shadow);
     border-radius: 50%;
     padding: 15%;
-    transition: height 1s;
 }
 .skills img:hover{
     background-color: var(--main_off);
@@ -280,13 +279,14 @@ header a{
 
 /*-------------------------SKILLS------------------------------*/
 .skills{
-    justify-items: normal;
     min-height: 100vh;
-
 }
-.skill-boxes{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+.skill-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 /*-------------------------SKILLS:END------------------------------*/
 
