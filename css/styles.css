@@ -191,7 +191,7 @@ header a{
 
 /*-------------------------PORTFOLIO------------------------------*/
 .projects{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: 5% auto 5%;
     grid-template-areas:
