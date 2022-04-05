@@ -181,7 +181,6 @@ header a{
     box-shadow: var(--shadow);
     border-radius: 50%;
     padding: 15%;
-    flex-basis: auto;
 }
 .skills img:hover{
     background-color: var(--main_off);
