@@ -59,8 +59,6 @@ header a{
 
 }
 
-
-
 .toggle{
     display: block;
     position: fixed;
@@ -87,17 +85,10 @@ header a{
 
 /*-------------------------ABOUT------------------------------*/
 .about{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 15% 2fr 1fr 2fr 1fr 20%;
-    grid-template-areas: 
-    ". . ."
-    ". h ."
-    ". s ."
-    ". . ."
-    ". c ."
-    ". . .";
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    padding: 15vh 10vh 0vh 10vh;
 }
 .socials{
     width: 100%;
@@ -151,19 +142,16 @@ header a{
 
 /*-------------------------SKILLS------------------------------*/
 .skills{
-    display: grid;
-    grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
-    grid-template-areas: 
-    ". sh sh sh ."
-    ". si si si ."
-    ". . . . .";
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vh 5vh 5vh ;
 }
 .skills > .heading{
-    grid-area: sh;
+    text-align: center;
     justify-self: center;
+    padding-bottom: 5vh;
 }
 .skill-boxes{
-    grid-area: si;
     gap: 4rem;
     justify-content: center;
 }
@@ -192,21 +180,15 @@ header a{
 /*-------------------------PORTFOLIO------------------------------*/
 .projects{
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 5% auto 5%;
-    grid-template-areas:
-    ". h ."
-    "g g g"
-    ". . .";
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
 }
 
 .projects > .heading{
-    grid-area: h;
     text-align: center;
 }
 .project-boxes{
-    grid-area: g;
-    
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
@@ -233,7 +215,16 @@ header a{
     padding: 2%;
     color: black;
     text-decoration: none;
+    box-shadow: var(--shadow);
     border-radius: 10%;
+}
+.box > a:hover{
+    color: var(--accent_bright);
+    background-color: var(--main);
+    box-shadow: none;
+    font-size: 1rem;
+    border: var(--accent_bright) 1px solid;
+    transition: font-size 350ms ease-in-out;
 }
 /*-------------------------PORTFOLIO:END------------------------------*/
 
@@ -262,14 +253,6 @@ header a{
 
 /*-------------------------ABOUT------------------------------*/
 
-.about{
-    grid-template-areas: 
-    ". . ."
-    ". h ."
-    ". s ."
-    ". c ."
-    ". . .";
-}
 
 .cv{
     justify-self: center;
