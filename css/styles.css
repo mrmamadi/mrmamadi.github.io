@@ -198,6 +198,8 @@ header a{
 
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 2%;
+    
+    scroll-behavior: smooth;
 }
 .box {
     color: white;
