@@ -244,8 +244,10 @@ header a{
     box-shadow: var(--shadow);
     transform: translateX(0%);
     flex-direction: row;
-    position:relative;
-    margin: 1em 10% 0 10%;
+    position: fixed;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 1em 0 1em;
+    height: fit-content;
 }
 .nav-bar a:hover{
     font-size: larger;
@@ -266,6 +268,7 @@ header a{
 /*-------------------------SKILLS------------------------------*/
 .skills{
     min-height: 100vh;
+    padding-top: 2em;
 }
 
 .skill-boxes {
@@ -278,6 +281,9 @@ header a{
 
 
 /*-------------------------PORTFOLIO------------------------------*/
+.projects {
+    padding-top: 2em;
+}
 .project-boxes{
     grid-auto-columns: 50%
 }
