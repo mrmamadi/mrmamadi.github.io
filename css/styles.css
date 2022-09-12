@@ -159,6 +159,9 @@ header a {
 	justify-self: center;
 	padding-bottom: 5vh;
 }
+.skills h4 {
+	font-size: 2.5vh;
+}
 .skill-boxes {
 	gap: 4rem;
 	justify-content: center;
@@ -171,9 +174,9 @@ header a {
 }
 
 .skills img {
-	width: 75px;
+	width: 90px;
 	object-fit: contain;
-	height: 75px;
+	height: 90px;
 	box-shadow: var(--shadow);
 	border-radius: 50%;
 	padding: 15%;
@@ -198,8 +201,10 @@ header a {
 }
 .project-boxes {
 	display: grid;
+	grid-template-rows: auto auto;
 	grid-auto-flow: column;
 	grid-auto-columns: 100%;
+	gap: 2vh;
 
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
@@ -208,14 +213,16 @@ header a {
 	scroll-padding-inline: 2%;
 
 	scroll-behavior: smooth;
+	padding-bottom: 5%;
+	margin: 0 2vw 0 2vw;
 }
 .box {
+	font-size: 2vh;
+
 	color: white;
 	background-color: var(--main_off);
 	box-shadow: var(--shadow);
-	border-radius: 15%;
 	padding: 5%;
-	margin: 2%;
 	align-self: center;
 
 	scroll-snap-align: start;
@@ -226,7 +233,6 @@ header a {
 	color: black;
 	text-decoration: none;
 	box-shadow: var(--shadow);
-	border-radius: 10%;
 }
 .box > a:hover {
 	color: var(--accent_bright);
