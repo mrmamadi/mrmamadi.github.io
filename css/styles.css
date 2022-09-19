@@ -75,9 +75,6 @@ header a {
 	right: 2%;
 	z-index: 9999;
 }
-.toggle[aria-selected="true"] {
-	background-image: url("../img/icon_close.jpg");
-}
 
 /*-------------------------HEADER:END------------------------------*/
 
@@ -273,8 +270,9 @@ header a {
 
 	.about {
 		min-height: auto;
-		margin-top: 10vh;
-		margin: 10vh 15vh 10vh 15vh;
+		max-height: 100vh;
+		padding-top: 10vh;
+		margin: 0vh 15vh 5vh 15vh;
 	}
 	.about h3 {
 		text-align: start;
