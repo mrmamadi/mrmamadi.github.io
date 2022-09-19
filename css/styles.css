@@ -131,7 +131,7 @@ header a {
 	color: var(--accent_shade);
 	background-color: var(--accent_bright);
 	box-shadow: 5px 5px 5px black;
-	padding: 15px;
+	padding: 2vh;
 }
 
 .cv a:hover {
@@ -270,7 +270,6 @@ header a {
 
 	.about {
 		min-height: auto;
-		max-height: 100vh;
 		padding-top: 10vh;
 		margin: 0vh 15vh 5vh 15vh;
 	}
@@ -284,6 +283,9 @@ header a {
 		text-align: start;
 	}
 
+	.cv h4 {
+		margin: 0 0 2vh 0;
+	}
 	.cv,
 	.socials {
 		align-self: flex-end;
