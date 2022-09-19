@@ -1,6 +1,5 @@
 const primaryNav = document.querySelector(".nav-bar");
 const navToggle = document.querySelector(".toggle");
-// navToggle.style.backgroundImage = url("../img/icon_close.jpg");
 
 navToggle.addEventListener("click", () => {
 	const vis = primaryNav.getAttribute("data-visible");
